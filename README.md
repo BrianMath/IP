@@ -1,3 +1,5 @@
-# Lista 1 de IP em linguagem C
+# Listas que estou fazendo na matéria de Introdução a Programação com C
 
-Inclui os 15 exercícios e o miniprojeto 01
+- Lista 1: Coisas básicas, estruturas condicionais
+- Lista 2: Estruturas de repetição
+- Lista 3: Funções e introdução a ponteiros

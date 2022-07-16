@@ -10,7 +10,7 @@ int main() {
     delta = b*b - 4*a*c;
  
     if (delta < 0) {
-        printf("RAIZES IMAGINARIAS");
+        printf("RAIZES IMAGINARIAS\n");
     } else {
         x1 = (-b - sqrt(delta)) / (2*a);
         x2 = (-b + sqrt(delta)) / (2*a);
@@ -18,11 +18,18 @@ int main() {
         if (delta == 0) {
             printf("RAIZ UNICA\n");
             printf("X1 = %.2f", x1);
-        } else {            
+        } else {
             printf("RAIZES DISTINTAS\n");
-            printf("X1 = %.2f\n", x1);
-            printf("X2 = %.2f", x2);
-        } }
+ 
+            if (x1 < x2) {
+                printf("X1 = %.2f\n", x1);
+                printf("X2 = %.2f", x2);
+            } else {
+                printf("X1 = %.2f\n", x2);
+                printf("X2 = %.2f", x1);
+            }
+        }
+    }
  
     return 0;
 }

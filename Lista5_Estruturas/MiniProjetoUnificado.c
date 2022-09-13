@@ -32,7 +32,7 @@ void lePolinomio(double *coeficientes) {
 		scanf("%d", &pot);
 		if (pot > maiorPot) {
 			maiorPot = pot;
-			coeficientes = (double *) realloc(coeficientes, maiorPot * sizeof(double));
+			coeficientes = (double *) realloc(coeficientes, (maiorPot * sizeof(double)) + 1);
 		}
 		
 		coeficientes[pot] = atof(coefFinal);
@@ -52,7 +52,8 @@ int main() {
 
 	scanf("%d", &qtdPolinomios);
 
-	/* A: 1x^2+3x^9-2x^0 */
+	/* 1 */
+	/* A: 20x^2+3x^9-2x^0 */
 
 	// Recebe e aloca tudo dos polinômios
 	for (i = 0; i < qtdPolinomios; i++) {
@@ -71,15 +72,15 @@ int main() {
 		// Lê o corpo do polinômio
 		lePolinomio(polinomio[i].coef);
 
-		printf("\n\n----------\n");
+		// printf("\n\n----------\n");
 
 		for (int i = 0; i < 10; i++) {
-			if (polinomio[0].coef[i] > 0 || polinomio[0].coef[i] < 0) {
-				if (i > 0 && polinomio[0].coef[i] >= 0) {
+			if (polinomio[0].coef[i] != 0) {
+				if (i > 0 && polinomio[0].coef[i] > 0) {
 					printf("+");
 				}
 				
-				printf("%.2fx^%d", polinomio[0].coef[i], i);
+				printf("%.0fx^%d", polinomio[0].coef[i], i);
 			}
 		}
 		
